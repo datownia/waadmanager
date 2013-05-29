@@ -1,0 +1,39 @@
+﻿@model WaadManager.GraphStore.Models.Event
+
+<tr id="row_@Model.DatowniaId">
+    <td>@Model.Time
+        @if (!string.IsNullOrWhiteSpace(Model.Location))
+        {
+            var output = string.Format("[{0}]", Model.Location);
+            @Html.Raw(output)
+        }
+    </td>
+    <td>
+        <strong>@Model.Title</strong>
+        @if (!string.IsNullOrWhiteSpace(Model.Speakers))
+        {
+            var output = string.Format(" / {0}", Model.Speakers);
+            @Html.Raw(output)
+        }
+    </td>
+    <td>
+        @{
+            var buttonId = string.Format("buttonId{0}", Model.DatowniaId);
+            var buttonVal = "";
+            var buttonClick = "";
+        }
+
+        @if (!Model.IsFave)
+        {
+            buttonVal = "Add";
+            <input id="@buttonId" type="button" value="@buttonVal" onclick=" AddAsFavourite('@Model.Code', '@Model.DatowniaId'); "/>
+        }
+        else
+        {
+            buttonVal = "Remove";
+            <input id="@buttonId" type="button" value="@buttonVal" onclick=" RemoveFromFavourites('@Model.Code', '@Model.DatowniaId'); "/>
+        }
+
+        <img id="loading_@Model.DatowniaId" src="@Url.Content("~/Images/loading_small.gif")" width="16" height="16" style="display: none;"/>
+    </td>
+</tr>

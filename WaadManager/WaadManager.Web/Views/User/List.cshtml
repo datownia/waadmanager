@@ -1,0 +1,168 @@
+﻿@model IEnumerable<Microsoft.WindowsAzure.ActiveDirectory.User>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.accountEnabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.department)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dirSyncEnabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.displayName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.facsimileTelephoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.givenName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.jobTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastDirSyncTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mailNickname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.passwordPolicies)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.physicalDeliveryOfficeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.preferredLanguage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.state)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.streetAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telephoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usageLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userPrincipalName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objectType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objectId)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.accountEnabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.department)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dirSyncEnabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.displayName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.facsimileTelephoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.givenName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.jobTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastDirSyncTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mailNickname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mobile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.passwordPolicies)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.physicalDeliveryOfficeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.preferredLanguage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.state)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.streetAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telephoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usageLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.userPrincipalName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.objectType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.objectId)
+        </td>
+    </tr>
+}
+
+</table>

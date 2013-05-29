@@ -1,0 +1,14 @@
+﻿@if (Request.IsAuthenticated) 
+{                       
+    <span class="username" style="font-weight: bold; padding-right: 10px;"><text> Hello, @User.Identity.Name!</text></span>
+} 
+else {  
+    <!--    
+        <ul>  
+        
+            <li>@Html.ActionLink("Add 3rd party tenant as Global admin", "SignUp", "SignUp", routeValues: null, htmlAttributes: new { id = "signupLink" })</li>
+        
+            <li>@Html.ActionLink("Sign in", "LogOn", "Account", routeValues: null, htmlAttributes: new { id = "signLink" })</li>
+        </ul>
+        -->
+}

@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <!--
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                To learn more about ASP.NET MVC visit
+                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
+                If you have any questions about ASP.NET MVC visit
+                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
+            </p>
+        </div>
+    </section>-->
+}
+@if (ViewBag.Message != null)
+{
+    <h3>@ViewBag.Message</h3>
+}
+
+<h2>Welcome to the European Identity and Cloud Conference Agenda web site.</h2>
+
+<div style="margin-left:auto; margin-right:auto; width:100px; margin-top:30px; margin-bottom: 30px;">
+    <input
+        type="button"
+        value="Sign In"
+        onclick="window.location.href='@Url.Action("LogOn", "Account")'"
+        style="padding:20px;"
+        />
+</div>
+
+<h4>
+    <ul>
+        <li>
+            This site is a demonstration of how apis can be used to enable frictionless integration with
+            <a href="http://www.windowsazure.com/en-us/home/features/identity/">Windows Azure AD</a>
+            and the <a href="https://graphstoreapp.windows.net/">Windows Azure Graph Store</a> by using the
+            <a href="http://www.datownia.com">datownia</a> system developed by Release Mobile Ltd.
+        </li>
+        <li style="padding-top: 10px;">
+            If you are interested in finding out more about the technology used in this demonstration please contact:
+            <ul>
+                <li>
+                    will@releasemobile.com OR
+                </li>
+                <li>
+                    jamesbak@microsoft.com
+                </li>
+            </ul>
+        </li>
+    </ul>
+</h4>

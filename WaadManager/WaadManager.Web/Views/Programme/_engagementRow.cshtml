@@ -1,0 +1,19 @@
+﻿@model WaadManager.GraphStore.Models.Event
+
+<tr id="row_@Model.DatowniaId">
+    <td>@Model.Time
+        @if (!string.IsNullOrWhiteSpace(Model.Location))
+        {
+            var output = string.Format("[{0}]", Model.Location);
+            @Html.Raw(output)
+        }
+    </td>
+    <td>
+        <strong>@Model.Title</strong>
+        @if (!string.IsNullOrWhiteSpace(Model.Speakers))
+        {
+            var output = string.Format(" / {0}", Model.Speakers);
+            @Html.Raw(output)
+        }
+    </td>
+</tr>

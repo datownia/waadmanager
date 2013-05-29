@@ -1,0 +1,7 @@
+﻿<input type="button" value="Schedule" onclick="window.location.href='@Url.Action("ViewSchedule", "Programme")';"/>
+<input type="button" value="Favourites" onclick="window.location.href='@Url.Action("ViewFavourites", "Programme")';"/>
+
+@if (ViewBag.IsSpeaker != null && ViewBag.IsSpeaker)
+{
+    <input type="button" value="Engagements" onclick="window.location.href='@Url.Action("ViewMyEngagements", "Programme")';"/>
+}
