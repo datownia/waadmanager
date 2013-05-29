@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - European Identity and Cloud Conference Agenda Web site</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div style ="margin-left:70px;">
+                    <a href="@Url.Action("Index", "Home")">
+                        <img src="@Url.Content("~/Images/header-logo-idconf.png")" width="240" height="40"/>
+                    </a>
+                    <section id="login" style="float:right;">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                </div>
+            </div>
+            <div style="display:none;">
+                <nav style="margin-left:auto; margin-right:auto;">
+                    <ul id="menu">
+                        <li style="padding-left: 0px;">@Html.ActionLink("HOME", "Index", "Home")</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                <div style="width:90%; margin-left:20px; margin-bottom: 20px;">
+                    @RenderBody()
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <!--<p>&copy; @DateTime.Now.Year - Release Mobile Ltd</p>-->
+                </div>
+            </div>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

@@ -1,0 +1,96 @@
+﻿@using WaadManager.GraphStore.Models
+@{
+    ViewBag.Title = "View Favourites";
+}
+
+@{
+    Html.RenderPartial("_Buttons");
+}
+
+<h2>My Favourites</h2>
+
+@if (ViewBag.events14 != null && ((IEnumerable<Event>)ViewBag.events14).Any())
+{
+    <h3>Tuesday, 14-05-2013</h3>
+    <table>
+        @Html.Partial("_eventHeader")
+        <tbody>
+            @foreach (Event _event in ViewBag.events14)
+            {
+                @Html.Partial("_eventRow", _event)
+            }
+        </tbody>
+    </table>
+}
+
+@if (ViewBag.events15 != null && ((IEnumerable<Event>)ViewBag.events15).Any())
+{
+    <h3>Wednesday, 15-05-2013</h3>
+    <table>
+        @Html.Partial("_eventHeader")
+        <tbody>
+            @foreach (Event _event in ViewBag.events15)
+            {
+                @Html.Partial("_eventRow", _event)
+            }
+        </tbody>
+    </table>
+}
+
+@if (ViewBag.events16 != null && ((IEnumerable<Event>)ViewBag.events16).Any())
+{
+    <h3>Thursday, 16-05-2013</h3>
+    <table>
+        @Html.Partial("_eventHeader")
+        <tbody>
+            @foreach (Event _event in ViewBag.events16)
+            {
+                @Html.Partial("_eventRow", _event)
+            }
+        </tbody>
+    </table>
+}
+
+@if (ViewBag.events17 != null && ((IEnumerable<Event>)ViewBag.events17).Any())
+{
+    <h3>Friday, 17-05-2013</h3>
+    <table>
+        @Html.Partial("_eventHeader")
+        <tbody>
+            @foreach (Event _event in ViewBag.events17)
+            {
+                @Html.Partial("_eventRow", _event)
+            }
+        </tbody>
+    </table>
+}
+
+
+
+
+<script type="text/javascript">
+    var removeUrl = '@Url.Action("RemoveFavourite", "Programme")';
+    
+    function RemoveFromFavourites(eventCode, buttonId) {
+        $('#loading_' + buttonId).show();
+        wholeButtonId = 'buttonId' + buttonId;
+        //$('#' + wholeButtonId).attr('disabled', 'disabled');
+        $('#' + wholeButtonId).hide();
+        $.ajax({
+            url: removeUrl + '?eventCode=' + eventCode,
+            success: function () {
+                //check if parent has only one child. if so, remove parent
+                if ($('#row_' + buttonId).siblings().length == 0) {
+                    $('#row_' + buttonId).parent().parent().prev().remove();
+                    $('#row_' + buttonId).parent().parent().remove();
+                }
+                else
+                    $('#row_' + buttonId).remove();
+            },
+            complete: function () {
+                //$('#' + wholeButtonId).removeAttr('disabled');
+                $('#' + wholeButtonId).show();
+            }
+        });
+    }
+</script>

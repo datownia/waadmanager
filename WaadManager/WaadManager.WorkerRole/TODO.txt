@@ -1,0 +1,5 @@
+﻿- Create datownia user role dataset reader
+- Create ad writer module
+- Set up configuration in WorkerRole.OnStart
+- Place logic within WorkerRole.Run
+- Implement caching for auth token from waad

@@ -1,0 +1,20 @@
+Client ID:
+a8dda6a7-519f-4e52-928a-1699702c8a2a
+
+Client Secret:
+0mvviw3Flzv1zuVMGp211cNStLXRHa2gNvw/UFwGKLQ=
+
+/*--AD tenant account---------------------------------------------------------------------*/
+url:
+https://activedirectory.windowsazure.com/default.aspx?WHR=datownia.onmicrosoft.com
+user:
+ian.cox@datownia.onmicrosoft.com
+pwd:
+eNP5mT8XmvHI
+
+
+TenantDomainName: datownia.onmicrosoft.com
+TenantContextId: 3c887aaf-4cde-4f76-9d4a-9cf8457a3c96
+AppPrincipalId: e355c3b0-e492-43a5-bdf8-95783f57bd70
+Password: PL5R3my62Rtni5YX66cQG31N2UsNtPDrwU+x4jdR918=
+Audience URI: e355c3b0-e492-43a5-bdf8-95783f57bd70@3c887aaf-4cde-4f76-9d4a-9cf8457a3c96
