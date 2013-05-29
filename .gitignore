@@ -87,6 +87,7 @@ csx
 
 # Windows Azure Publisher Profile
 *.azurePubXml
+*.cscfg
 
 # Windows Store app package directory
 AppPackages/
